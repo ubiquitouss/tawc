@@ -1,0 +1,15 @@
+<h1>WORDS COUNTER MACHINE</h1>
+<h3>To know more . please visit: <a href="{% url 'about' %}">About Us</a></h3>
+
+<h2>original text</h2>
+{{your_text}}
+<br />
+<br />
+<h2>THE MACHINE SAYS:</h2>
+
+<p>you have <b>{{count}}</b> words in here</p>
+
+<h2>other informations:</h2>
+{%for word,counttotal in sortedwords%}
+<p>{{word}}-{{counttotal}}</p>
+{%endfor%}
